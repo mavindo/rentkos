@@ -1,0 +1,56 @@
+[
+  {
+    "date": "12 june, 2022",
+    "title": "Kos Putri Mawar",
+    "desc": "Kos putri dengan fasilitas lengkap, dekat dengan kampus dan pusat perbelanjaan.",
+    "image": "assets/image/blog/img_1.jpg",
+    "alamat": "Jl. Melati No. 10, Jakarta",
+    "harga": "1.500.000",
+    "fitur": "Apartment, Full Furnished"
+  },
+  {
+    "date": "24 May, 2022",
+    "title": "Kontrakan Harapan Indah",
+    "desc": "Kontrakan nyaman dengan 2 kamar tidur, cocok untuk keluarga kecil.",
+    "image": "assets/image/blog/img_2.jpg",
+    "fitur": "Apartment, Full Furnished",
+    "alamat": "Jl. Harapan Indah No. 5, Bekasi",
+    "harga": "2.500.000"
+  },
+  {
+    "date": "10 Apr, 2022",
+    "title": "Apartemen Green Park",
+    "desc": "Apartemen modern dengan fasilitas kolam renang dan gym, lokasi strategis di pusat kota.",
+    "image": "assets/image/blog/img_3.jpg",
+    "alamat": "Jl. Sudirman No. 20, Bandung",
+    "harga": "5.000.000",
+    "fitur": "Apartment, Full Furnished"
+  },
+  {
+    "date": "10 July, 2022",
+    "title": "Kos Putra Sejahtera",
+    "desc": "Kos putra dengan lingkungan aman dan nyaman, dekat dengan kampus dan tempat makan.",
+    "image": "assets/image/blog/img_4.jpg",
+    "alamat": "Jl. Kenanga No. 15, Surabaya",
+    "harga": "1.200.000",
+    "fitur": "Apartment, Full Furnished"
+  },
+  {
+    "date": "22 May, 2022",
+    "title": "Kontrakan Taman Sari",
+    "desc": "Kontrakan dengan 3 kamar tidur, halaman luas, dan akses mudah ke pusat kota.",
+    "image": "assets/image/blog/img_5.jpg",
+    "alamat": "Jl. Taman Sari No. 8, Yogyakarta",
+    "harga": "2.200.000",
+    "fitur": "Apartment, Full Furnished"
+  },
+  {
+    "date": "10 July, 2022",
+    "title": "Apartemen Sky Residence",
+    "desc": "Apartemen mewah dengan pemandangan kota, fasilitas lengkap termasuk kolam renang dan gym.",
+    "image": "assets/image/blog/img_6.jpg",
+    "alamat": "Jl. Gatot Subroto No. 30, Medan",
+    "harga": "4.500.000",
+    "fitur": "Apartment, Full Furnished"
+  }
+  ]

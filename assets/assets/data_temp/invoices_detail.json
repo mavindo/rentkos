@@ -1,0 +1,40 @@
+[
+  {
+    "userId": 1,
+    "invoiceId": "#MN0204",
+    "date": "01 Oct,2020",
+    "billname": "James",
+    "designation": "Project Lead",
+    "amount": 20000.0,
+    "status": "Paid",
+    "isCheck": false,
+    "address": "1234 North Avenue, 4th Floor, New York, NY 56789",
+    "email": "",
+    "phone": "+1 123 456 7890",
+    "orderDate": "01 Oct,2020",
+    "dueDate": "15 Oct,2020",
+    "items": [
+      {
+        "no": 1,
+        "id": 1,
+        "name": "Web Design",
+        "description": "Web Design",
+        "quantity": 1,
+        "price": 20000.0
+      }
+    ],
+    "tax": 0.0,
+    "total": 20000.0,
+    "payment": [
+      {
+        "id": 1,
+        "transactionId": "#MN0204",
+        "paymentDate": "01 Oct,2020",
+        "amount": 20000.0,
+        "paymentType": "Paypal",
+        "status": "Paid"
+      }
+    ]
+
+  }
+]

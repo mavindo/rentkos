@@ -1,0 +1,56 @@
+[
+    {
+      "name": "Phyllis Gatlin",
+      "position": "UI/UX Designer",
+      "email": "phyllisgatlin@JasPro.com",
+      "image": "assets/image/avatar.png"
+    },
+    {
+      "name": "James Nix",
+      "position": "Frontend Developer",
+      "email": "jamesnix@JasPro.com",
+      "image": "assets/image/avatar2.png"
+    },
+    {
+      "name": "Darlene Smith",
+      "position": "Backend Developer",
+      "email": "darlenesmith@JasPro.com",
+      "image": "assets/image/avatar3.png"
+    },
+    {
+      "name": "William Swift",
+      "position": "Full Stack Developer",
+      "email": "williamswift@JasPro.com",
+      "image": "assets/image/avatar4.png"
+    },
+    {
+      "name": "Paul Sanchez",
+      "position": "Angular Developer",
+      "email": "paulsanchez@JasPro.com",
+      "image": "assets/image/avatar4.png"
+    },
+    {
+      "name": "Diana Owens",
+      "position": "Graphic Designer",
+      "email": "dianaowens@JasPro.com",
+      "image": "assets/image/avatar3.png"
+    },
+    {
+      "name": "Tommy Hayes",
+      "position": "UI/UX Designer",
+      "email": "tommyhayes@JasPro.com",
+      "image": "assets/image/avatar2.png"
+    },
+    {
+      "name": "Kevin West",
+      "position": "Frontend Developer",
+      "email": "kevinwest@JasPro.com",
+      "image": "assets/image/avatar.png"
+    },
+    {
+      "name": "Peter Dryer",
+      "position": "Web Designer",
+      "email": "peterdryer@JasPro.com",
+      "image": "assets/image/avatar.png"
+    }
+  ]

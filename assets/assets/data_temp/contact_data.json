@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Phyllis Gatlin",
+      "position": "UI/UX Designer",
+      "email": "phyllisgatlin@JasPro.com",
+      "tages": "photoshop",
+      "image": "assets/image/avatar.png"
+    },
+    {
+      "name": "James Nix",
+      "position": "Frontend Developer",
+      "email": "jamesnix@JasPro.com",
+      "tages": "html",
+      "image": "assets/image/avatar2.png"
+    },
+    {
+      "name": "Darlene Smith",
+      "position": "Backend Developer",
+      "email": "darlenesmith@JasPro.com",
+      "tages": "Java",
+      "image": "assets/image/avatar3.png"
+    },
+    {
+      "name": "William Swift",
+      "position": "Full Stack Developer",
+      "email": "williamswift@JasPro.com",
+      "tages": "Ruby",
+      "image": "assets/image/avatar4.png"
+    },
+    {
+      "name": "Paul Sanchez",
+      "position": "Angular Developer",
+      "email": "paulsanchez@JasPro.com",
+      "tages": "php",
+      "image": "assets/image/avatar4.png"
+    },
+    {
+      "name": "Diana Owens",
+      "position": "Graphic Designer",
+      "email": "dianaowens@JasPro.com",
+      "tages": "photoshop",
+      "image": "assets/image/avatar3.png"
+    },
+    {
+      "name": "Tommy Hayes",
+      "position": "UI/UX Designer",
+      "email": "tommyhayes@JasPro.com",
+      "tages": "illustrator",
+      "image": "assets/image/avatar2.png"
+    },
+    {
+      "name": "Kevin West",
+      "position": "Frontend Developer",
+      "email": "kevinwest@JasPro.com",
+      "tages": "Css",
+      "image": "assets/image/avatar.png"
+    },
+    {
+      "name": "Peter Dryer",
+      "position": "Web Designer",
+      "email": "peterdryer@JasPro.com",
+      "tages": "Html",
+      "image": "assets/image/avatar.png"
+    }
+  ]
