@@ -19,17 +19,93 @@
 
   <!-- Fix for invisible input text on some Chromium-based browsers (Edge/Chrome) -->
   <style>
-    /* Scoped styles: only apply to OTP inputs (class .otp-input) to avoid breaking other form fields */
-    /* Also include numeric inputmode which Flutter uses for numeric TextField on web */
-    input.otp-input, textarea.otp-input, select.otp-input,
-    input[inputmode="numeric"], input[inputmode="decimal"] {
+    /* Scoped styles for OTP inputs only. Keep change minimal and safe for other fields. */
+    /* Target OTP-specific inputs and common numeric input types Flutter may emit on web */
+    input.otp-input,
+    textarea.otp-input,
+    select.otp-input,
+    .pin-input,
+    .code-input,
+    /* explicit input types */
+    input[type="text"].otp-input,
+    input[type="tel"],
+    input[type="tel"].otp-input,
+    input[type="number"],
+    input[type="number"].otp-input,
+    input[type="password"].otp-input,
+    /* inputmode coverage */
+    input[inputmode="numeric"],
+    input[inputmode="decimal"],
+    input[inputmode="numeric"].otp-input,
+    input[inputmode="decimal"].otp-input {
+      /* enforce visible black text */
       color: #000 !important;
-      -webkit-text-fill-color: #000 !important; /* for Chrome/Edge autofill */
-      caret-color: #0b5cff !important; /* visible caret */
+      -webkit-text-fill-color: #000 !important; /* Chromium autofill/text fill */
+
+      /* Prefer monospace/tabular glyphs for digits to avoid glyph-substitution */
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      line-height: 1 !important;
+      letter-spacing: 0.6px !important;
+
+      /* numeric glyphs should render LTR and as tabular numbers for consistent width */
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+      font-variant-numeric: tabular-nums !important;
+      font-feature-settings: "tnum" 1 !important;
+      font-variant-ligatures: none !important;
+      font-variant-east-asian: none !important;
+
+      /* remove platform default controls/appearance that can hide/mask text */
+      appearance: none !important;
+      -webkit-appearance: textfield !important;
+      -moz-appearance: textfield !important;
+
+      /* explicitly disable password-style masking on Chromium */
+      -webkit-text-security: none !important;
+
+      /* caret and selection visibility */
+      caret-color: #0b5cff !important;
+
+      /* text rendering smoothing */
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      text-rendering: optimizeLegibility !important;
+
+      /* avoid transforms/rotations */
+      transform: none !important;
+      text-transform: none !important;
     }
+
+    /* Also explicitly target pseudo-element used by some browsers for autofill */
+    input.otp-input:-webkit-autofill,
+    input[type="tel"]:-webkit-autofill,
+    input[type="number"]:-webkit-autofill,
+    input[inputmode="numeric"]:-webkit-autofill,
+    input[inputmode="decimal"]:-webkit-autofill,
+    input.otp-input:-webkit-autofill::first-line,
+    input[type="tel"]:-webkit-autofill::first-line,
+    input[type="number"]:-webkit-autofill::first-line,
+    input[inputmode="numeric"]:-webkit-autofill::first-line,
+    input[inputmode="decimal"]:-webkit-autofill::first-line {
+      -webkit-text-fill-color: #000 !important;
+      transition: background-color 5000s ease-in-out 0s !important;
+    }
+
     /* Force placeholder (hint) to be visible as well for OTP inputs */
-    input.otp-input::placeholder, textarea.otp-input::placeholder {
+    input.otp-input::placeholder,
+    textarea.otp-input::placeholder {
       color: rgba(0,0,0,0.35) !important;
+    }
+
+    /* Defensive: if Flutter injects inner shadow or masking elements, ensure they don't hide text */
+    input.otp-input *,
+    input[type="tel"] *,
+    input[type="number"] * {
+      color: inherit !important;
+      -webkit-text-fill-color: inherit !important;
+      -webkit-font-smoothing: antialiased !important;
     }
   </style>
 
@@ -47,7 +123,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    const serviceWorkerVersion = "2018790837";
+    const serviceWorkerVersion = "3614998917";
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -66,7 +142,7 @@
         // Wait for registration to finish before dropping the <script> tag.
         // Otherwise, the browser will load the script multiple times,
         // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"2018790837"';
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"3614998917"';
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
             function waitForActivation(serviceWorker) {
@@ -81,7 +157,7 @@
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith('"2018790837"')) {
+            } else if (!reg.active.scriptURL.endsWith('"3614998917"')) {
               // When the app updates the serviceWorkerVersion changes, so we
               // need to ask the service worker to update.
               console.log('New service worker available.');
