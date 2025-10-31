@@ -11,7 +11,7 @@
     For more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
-  <base href="/rentkos/">
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -23,7 +23,7 @@
   <meta name="apple-mobile-web-app-title" content="responsive_admin_dashboard">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>KOS KOS - Modern Dashboard</title>
+  <title>Kos and Cost - Modern Dashboard</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -31,7 +31,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    const serviceWorkerVersion = "1470333106";
+    const serviceWorkerVersion = "2469890440";
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -50,7 +50,7 @@
         // Wait for registration to finish before dropping the <script> tag.
         // Otherwise, the browser will load the script multiple times,
         // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"1470333106"';
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"2469890440"';
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
             function waitForActivation(serviceWorker) {
@@ -65,7 +65,7 @@
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith('"1470333106"')) {
+            } else if (!reg.active.scriptURL.endsWith('"2469890440"')) {
               // When the app updates the serviceWorkerVersion changes, so we
               // need to ask the service worker to update.
               console.log('New service worker available.');
