@@ -102,7 +102,7 @@
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     // Removed deprecated serviceWorkerVersion variable
-    // Now using "2883272391" template token
+    // Now using "2547304790" template token
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -134,7 +134,7 @@
         // Wait for registration to finish before dropping the <script> tag.
         // Otherwise, the browser will load the script multiple times,
         // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"2883272391"';
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + '"2547304790"';
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
             function waitForActivation(serviceWorker) {
@@ -149,7 +149,7 @@
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith('"2883272391"')) {
+            } else if (!reg.active.scriptURL.endsWith('"2547304790"')) {
               // When the app updates the serviceWorkerVersion changes, so we
               // need to ask the service worker to update.
               console.log('New service worker available.');
